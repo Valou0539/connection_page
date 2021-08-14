@@ -203,7 +203,7 @@ body, html {
 }
 
 #cgu.mobil:checked:after {
-    transform: translateX(16px);
+    transform: translateX(16px), translateY(-1px);
 }
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||*/
