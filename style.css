@@ -58,7 +58,7 @@ body, html {
 .active .form_transition {
     max-height: 100vh;
     opacity: 1;
-    overflow-y: hidden;
+    overflow-y: visible;
     transition: max-height .5s, opacity .4s .1s;
 }
 
@@ -152,6 +152,10 @@ body, html {
     min-width: 40px;
     margin-right: 5px;
     flex-grow: 2;
+    visibility: visible;
+}
+
+#cgu.mobil {
     visibility: hidden;
 }
 
