@@ -189,7 +189,6 @@ body, html {
 
 .mobil::after {
     top: 3px !important;
-    bottom: 3px !important;
     height: 14px !important;
     width: 14px !important;
     transform: translateY(-1px) !important;
