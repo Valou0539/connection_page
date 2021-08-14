@@ -275,6 +275,6 @@ loginInput.addEventListener('click', sendLoginForm)
 // Mobile #cgu::after position change
 
 if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    window.alert(vous êtes sur mobile)
+    window.alert('vous êtes sur mobile')
     signUpFormContent.cgu.classList.add('mobil')
 }
