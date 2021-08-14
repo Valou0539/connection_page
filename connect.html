@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem.com | Connection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="connection">
+        <div id="signUp" class="sign_up_container">
+            <div class="sign_up_item">
+                <div class="text">
+                    <h2>Sign up</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                </div>
+                <form id="signUpForm" action="#signUp">
+                    <div class="form_transition">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="input">
+                            <label for="mail">E-mail</label>
+                            <input type="email" id="signUpMail" name="mail" placeholder="E-mail" required>
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <input type="password" id="signUpPassword" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="cgu">
+                            <input type="checkbox" id="cgu" name="cgu" required>
+                            <label for="cgu">I accept the <a href="#cguList" class="js-modal">terms and conditions</a></label>
+                        </div>
+                    </div>
+                    <input id="signUpInput" type="submit" value="Sign up">
+                </form>
+                <a id="activeSignUp" href="#signUp">Sign up</a>
+            </div>
+        </div>
+        <div id="login" class="login_container">
+            <div class="login_item">
+                <div class="text">
+                    <h2>Welcome Back!</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                </div>
+                <form id="loginForm" action="#login">
+                    <div class="form_transition">
+                        <div class="input">
+                            <label for="mail">E-mail</label>
+                            <input type="email" id="loginMail" name="mail" placeholder="E-mail" required>
+                        </div>
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <input id="loginInput" type="submit" value="login">
+                </form>
+                <a id="activeLogin" href="#login">login</a>
+            </div>
+        </div>
+    </main>
+
+    <aside aside id="cguList" class="modal" aria-hidden="true" role="dialog" aria-labelledby="title_modal" style="display: none;">
+        <div class="modal_wrapper js-modal_stop">
+            <button class="closeCGU js-modal_close">Close</button>
+
+            <h1>Terms and conditions of <span>Lorem.com</span></h1>
+
+            <blockquote>
+                <strong>Article 1 :</strong> Object
+
+                <p>These T & Cs or General Conditions of Use legally govern the use of the services of the lapetiteperle site (hereinafter referred to as "the site").</p>
+                <p>Constituting the contract between the company Lorem.com, the User, access to the site must be preceded by the acceptance of these T & Cs. Access to this platform signifies acceptance of these T & Cs.</p>
+
+                <strong>Article 2 :</strong> <a href="#legal-notices">Legal notices</a>
+
+                <p>The lapetiteperle site is edited by the company Lorem.com registered with the RCS under number 451 432 228, whose head office is located at 3 Rue Docteur Joubert, 59110, La Madeleine, Metropolitan France.</p>
+                <p>The host of the lapetiteperle.fr site is LHW, located at 5 Rue Keller, 59100 Roubaix, France.</p>
+
+                <strong>Article 3 :</strong> Access to the site
+
+                <p>The lapetiteperle site provides free access to the following services:</p>
+
+                <ul>
+                    <li>Sale of jewelry (gold, silver, etc.) ;</li>
+                    <li>Rental of jewelry (gold, silver, etc.) ;</li>
+                    <li>Deposit-sale of jewelry.</li>
+                </ul>
+            </blockquote>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>
