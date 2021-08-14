@@ -352,18 +352,17 @@ body, html {
     height: 30px;
     width: 100%;
     display: block;
-    background: #fddea2;
+    background: linear-gradient(to right, #fddea2, #fddea2);
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 3px;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1.1em;
-    transition: background-color .3s;
 }
 
 #loginInput.active {
-    background: #fff;
+    background: linear-gradient(to right, #fff, #fff);
     cursor: pointer;
 }
 
