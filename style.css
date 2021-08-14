@@ -1,6 +1,5 @@
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     padding: 0;
@@ -13,15 +12,9 @@ body, html {
 }
 
 .connection {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -59,8 +52,6 @@ body, html {
     max-height: 0;
     opacity: 0;
     overflow-y: hidden;
-    -webkit-transition: max-height .4s .1s, opacity .5s;
-    -o-transition: max-height .4s .1s, opacity .5s;
     transition: max-height .4s .1s, opacity .5s;
 }
 
@@ -68,8 +59,6 @@ body, html {
     max-height: 100vh;
     opacity: 1;
     overflow-y: hidden;
-    -webkit-transition: max-height .5s, opacity .4s .1s;
-    -o-transition: max-height .5s, opacity .4s .1s;
     transition: max-height .5s, opacity .4s .1s;
 }
 
@@ -87,17 +76,9 @@ body, html {
     position: relative;
     height: 100vh;
     background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: width .3s;
-    -o-transition: width .3s;
+    justify-content: center;
+    align-items: center;
     transition: width .3s;
 }
 
@@ -152,14 +133,9 @@ body, html {
 /* ||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 .cgu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
 }
 
@@ -169,20 +145,14 @@ body, html {
 
 #cgu {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     height: 20px;
     width: 40px;
     max-width: 40px;
     min-width: 40px;
     margin-right: 5px;
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
+    flex-grow: 2;
     visibility: hidden;
 }
 
@@ -197,8 +167,6 @@ body, html {
     border: 1px solid #222529;
     border-radius: 25px;
     background-color: #fff;
-    -webkit-transition: background-color .3s;
-    -o-transition: background-color .3s;
     transition: background-color .3s;
     visibility: visible;
 }
@@ -206,6 +174,7 @@ body, html {
 #cgu::after {
     content: '';
     position: absolute;
+    display: block;
     top: 2px;
     bottom: 2px;
     height: 16px;
@@ -213,21 +182,15 @@ body, html {
     background-color: #222529;
     border-radius: 50%;
     margin: 0 2px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    -webkit-transition: background-color .3s, -webkit-transform .3s;
-    transition: background-color .3s, -webkit-transform .3s;
-    -o-transition: background-color .3s, transform .3s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     transition: background-color .3s, transform .3s;
-    transition: background-color .3s, transform .3s, -webkit-transform .3s;
     z-index: 10;
     visibility: visible;
 }
 
 #cgu.mobil::after {
-    background-color: #f00;
-    top: 0px;
-    bottom: 0px;
+    margin: 0;
+    inset: 2px auto 2px 2px;
 }
 
 #cgu:checked::before {
@@ -241,7 +204,7 @@ body, html {
 }
 
 #cgu.mobil:checked:after {
-    transform: translateX(16px);
+    transform: translateX(20px);
 }
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -256,8 +219,6 @@ body, html {
     height: 30px;
     width: 100%;
     display: block;
-    background: -webkit-gradient(linear, left top, right top, from(#F3D43C), to(#FCA86C));
-    background: -o-linear-gradient(left, #F3D43C, #FCA86C);
     background: linear-gradient(to right, #F3D43C, #FCA86C);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
@@ -275,8 +236,6 @@ body, html {
     width: 85%;
     margin: auto;
     display: block;
-    background: -webkit-gradient(linear, left top, right top, from(#F3D43C), to(#FCA86C));
-    background: -o-linear-gradient(left, #F3D43C, #FCA86C);
     background: linear-gradient(to right, #F3D43C, #FCA86C);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
@@ -302,17 +261,9 @@ body, html {
     width: 50%;
     height: 100vh;
     background-color: #F9BC35;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: width .3s;
-    -o-transition: width .3s;
+    justify-content: center;
+    align-items: center;
     transition: width .3s;
 }
 
@@ -405,22 +356,15 @@ body, html {
 .modal {
     position: fixed;
     z-index: 10;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    -webkit-animation: fadeIn .3s both;
-            animation: fadeIn .3s both;
+    animation: fadeIn .3s both;
 }
 
 .modal_wrapper {
@@ -430,8 +374,7 @@ body, html {
     max-height: calc(100vh - 20px);
     padding: 20px;
     background-color: #fff;
-    -webkit-animation: slideFromTop .5s both;
-            animation: slideFromTop .5s both;
+    animation: slideFromTop .5s both;
 }
 
 .modal_wrapper *:focus {
@@ -458,13 +401,11 @@ body, html {
 }
 
 .modal[aria-hidden="true"] {
-    -webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
+    animation-name: fadeOut;
 }
 
 .modal[aria-hidden="true"] .modal_wrapper {
-    -webkit-animation-name: slideToBottom;
-            animation-name: slideToBottom;
+    animation-name: slideToBottom;
 }
 
 .modal_wrapper blockquote {
@@ -494,19 +435,9 @@ body, html {
     padding-left: 20px;
 }
 
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-
-@-webkit-keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
 }
 
 @keyframes fadeOut {
@@ -514,24 +445,14 @@ body, html {
     to {opacity: 0;}
 }
 
-@-webkit-keyframes slideFromTop {
-    from {-webkit-transform: translateY(-50px);transform: translateY(-50px);}
-    to {-webkit-transform: translateY(0);transform: translateY(0);}
-}
-
 @keyframes slideFromTop {
-    from {-webkit-transform: translateY(-50px);transform: translateY(-50px);}
-    to {-webkit-transform: translateY(0);transform: translateY(0);}
-}
-
-@-webkit-keyframes slideToBottom {
-    from {-webkit-transform: translateY(0);transform: translateY(0);}
-    to {-webkit-transform: translateY(50px);transform: translateY(50px);}
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0);}
 }
 
 @keyframes slideToBottom {
-    from {-webkit-transform: translateY(0);transform: translateY(0);}
-    to {-webkit-transform: translateY(50px);transform: translateY(50px);}
+    from {transform: translateY(0);}
+    to {transform: translateY(50px);}
 }
 
 @media only screen and (min-width: 1020px) {
@@ -554,13 +475,8 @@ body, html {
 
 @media only screen and (max-width: 750px) {
     .connection {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
         background: #F9BC35;
     }
     .sign_up_container {
