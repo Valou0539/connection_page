@@ -225,6 +225,7 @@ body, html {
 }
 
 #cgu.mobil::after {
+    background-color: #f00;
     top: 0px;
     bottom: 0px;
 }
