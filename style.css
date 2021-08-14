@@ -190,6 +190,8 @@ body, html {
 #cgu.mobil::after {
     background-color: #ff0000 !important;
     transform: translateY(-1px);
+    height: 14px;
+    width: 14px;
 }
 
 #cgu:checked::before {
