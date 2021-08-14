@@ -187,7 +187,7 @@ body, html {
     visibility: visible;
 }
 
-mobil::after {
+.mobil::after {
     top: 3px !important;
     bottom: 3px !important;
     height: 14px !important;
