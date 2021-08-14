@@ -188,7 +188,6 @@ body, html {
 }
 
 #cgu.mobil::after {
-    background-color: #ff0000 !important;
     top: 3px;
     bottom: 3px;
     height: 14px;
