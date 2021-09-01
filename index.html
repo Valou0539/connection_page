@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem.com | Home</title>
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .toggle_account a:first-of-type {
+            border-right: 3px solid #000;
+        }
+        .toggle_account a {
+            display: block;
+            width: 50%;
+            height: calc(100vh - 51px);
+            padding: calc(50vh - 120px) 0;
+            text-align: center;
+            font-size: 32px;
+            transition: .3s;
+        }
+        .toggle_account a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">Lorem<span>.com</span></a>
+        <button onclick="toggleMenu()" id="menuButton" class="menu_button">
+            <img class="open_menu" src="img/menu.svg" alt="Open menu">
+            <img class="close_menu" src="img/close.svg" alt="Close menu">
+        </button>
+        <nav class="header_nav">
+            <div class="nav">
+                <div class="link">
+                    <a href="index.html" class="selected">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact us</a>
+                    <div class="link_menu"></div>
+                </div>
+                <form class="searchForm" action="index.html">
+                    <input id="searchBar" type="text" name="search" placeholder="">
+                    <button type="submit">&#160</button>
+                </form>
+            </div>
+            <div class="profil">
+                <div class="card_replacement"></div>
+                <button class="card">
+                    <div class="visible_info">
+                        <span>John Doe</span>
+                        <img class="profil_picture" src="img/profil.png" alt="profil picture">       
+                    </div>
+                    <div class="vanish_info">
+                        <a class="profil_link" style="display: none;" href="#"><span>Account settings</span><img src="img/settings.svg" alt="settings icone"></a>
+                        <a class="profil_link" style="display: none;" href="index.html?action=deco"><span>Sign out</span><img src="img/logout.svg" alt="logout icone"></a>
+                        <a onclick="closeProfilPlus()" class="profil_close_button" href="#">Close</a>
+                    </div>
+                </button>
+            </div>
+            <div class="profil_unset" style="display: none;">
+                <a href="connect.html#signUp">Sign up<span class="intersection"></span></a>
+                <a href="connect.html#login">Login</a>
+            </div>
+        </nav>
+    </header>
+    <div class="toggle_account" style="display: flex;">
+        <a href="#withoutProfil">Without profil</a>
+        <a href="#withProfil">With profil</a>
+    </div>
+
+    <script src="app_index.js"></script>
+    <script>
+        function hashChange () {
+            if (window.location.hash === '#withoutProfil') {
+                document.querySelector('.profil').style.display = 'none'
+                document.querySelector('.profil_unset').style.display = ''
+            } else {
+                document.querySelector('.profil').style.display = ''
+                document.querySelector('.profil_unset').style.display = 'none'
+            }
+        }
+
+        hashChange()
+        window.addEventListener('hashchange', hashChange)
+    </script>
+</body>
+</html>

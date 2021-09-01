@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: #222529;
+}
+
+body, html {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+                  /* Header */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    background: #F9BC35;
+    padding: 0 0 0 25px;
+    border-bottom: solid 1px #222529;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.header .logo {
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header .logo span {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: auto;
+    text-transform: none;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.menu_button {
+    display: none;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.header_nav {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.link > a {
+    padding: 13px 10px;
+    border-left: 1px solid #222529;
+    height: 100%;
+    max-height: 50px;
+    font-size: 1.05em;
+    flex-shrink: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.nav a:hover, .nav a:focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header .header_nav .nav a:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.nav a:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav .selected {
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.link_menu {
+    display: none;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.searchForm {
+    height: 100%;
+    max-height: 50px;
+    font-size: 1.05em;
+    padding: 5px 10px 5px 20px;
+    position: relative;
+    border-left: 1px solid #222529;
+}
+
+.searchForm input {
+    height: 40px;
+    width: 40px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #777;
+    transition: width .5s;
+}
+
+.searchForm input:focus {
+    outline: 0px;
+    width: 252px;
+    border: 1px solid #222529;
+}
+
+.searchForm button {
+    height: 38px;
+    width: 38px;
+    background: rgba(255, 255, 255, 0.5);
+    background-image: url(img/search.svg);
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+    background-position: 3px 3px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 11.5px;
+    top: 6px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .3s;
+}
+
+.searchForm input:focus ~ button {
+    opacity: 1;
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.card_replacement {
+    width: 230px;
+    height: 50px;
+}
+
+.card {
+    width: 220px;
+    height: 51px;
+    max-height: 51px;
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    border: 0px transparent;
+    border-left: solid 1px rgba(0, 0, 0, .5);
+    border-bottom: solid 1px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #222529;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: .5s;
+}
+
+.visible_info {
+    width: 100%;
+    height: 50px;
+    padding: 5px 57.5px 5px 0;
+}
+
+.visible_info span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+}
+
+.visible_info span::after {
+    content: '';
+    border-right: 1px solid #fff;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.profil_picture {
+    display: block;
+    width: 45px;
+    height: auto;
+    position: absolute;
+    top: 2.5px;
+    right: 7.5px;
+    border: 1px solid #222529;
+    border-radius: 50%;
+}
+
+.vanish_info {
+    width: 100%;
+    height: 149px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.vanish_info::before {
+    content: '';
+    display: block;
+    margin: 10px 10px 20px 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #F9BC35;
+}
+
+.vanish_info a {
+    width: 100%;
+    display: block;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vanish_info a span {
+    color: #fff;
+    text-align: right;
+    display: block;
+    font-size: 1.2em;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    width: 125px;
+    margin-left: 0;
+}
+
+.vanish_info a img {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 20px 0 0;
+}
+
+.vanish_info .profil_close_button {
+    display: none;
+}
+
+.profil_active .card {
+    height: auto;
+    max-height: 100vh;
+}
+
+.profil_link {
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.profil_link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.profil_unset {
+    background: #222529;
+    display: flex;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.profil_unset a {
+    color: #fff;
+    display: block;
+    width: 100px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    transition: background-color .3s;
+}
+
+.profil_unset a:nth-of-type(1) {
+    width: 95px;
+}
+
+.intersection {
+    border-right: 2px solid #fff;
+    display: block;
+    height: 70px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    transform: rotate(22.5deg) translateY(-10px);
+    background: #222529;
+    z-index: 1;
+    transition: background-color .3s;
+}
+
+.profil_unset a:hover, .profil_unset a:focus {
+    outline: none;
+    background-color: #4F5154;
+}
+
+.profil_unset a:hover .intersection, .profil_unset a:focus .intersection {
+    background-color: #4F5154;
+}
+
+@media only screen and (min-width:1250px) {
+    .searchForm input {
+        width: 252px !important;
+    }
+    .card {
+        width: 250px;
+    }
+    .card_replacement {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width:1050px) {
+    .link {
+        overflow: hidden;
+        max-width: 349.05px;
+        justify-content: flex-start;
+    }
+    .link_menu {
+        display: block;
+        height: 50px;
+        min-width: 35px;
+        padding: 8px 0;
+        border: 0px transparent;
+        border-left: 1px solid #222529;
+        opacity: 0.7;
+        cursor: pointer;
+        background: transparent;
+        background-image: url(img/link_menu.svg);
+        background-repeat: no-repeat;
+        background-clip: content-box;
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .header_nav {
+        display: none;
+    }
+    .active .header_nav {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #222529;
+    }
+    .menu_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 50px;
+        background: none;
+        border: none;
+        padding-right: 5px;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    .menu_button img {
+        width: 44px;
+        height: 44px;
+    }
+    .close_menu, .active .open_menu {
+        display: none;
+    }
+    .active .menu_button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        padding-right: 0;
+        padding-left: 5px;
+        opacity: 1;
+    }
+    .active .close_menu {
+        display: block;
+        width: 38px;
+        height: 38px;
+    }
+    .nav {
+        flex-direction: column;
+        height: calc(100vh - 51px);
+        order: 2;
+    }
+    .searchForm {
+        order: 1;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .searchForm input {
+        width: 100% !important;
+    }
+    .link {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        max-width: none;
+        height: 280px;
+        order: 2;
+        overflow: visible;
+    }
+    .link a {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        max-height: 70px;
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+    .link_menu {
+        display: none;
+    }
+    .profil_unset {
+        margin-left: auto;
+        margin-bottom: 30px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        width: 195px;
+    }
+    .profil {
+        order: 1;
+    }
+    .card {
+        border-color: #fff;
+        width: 250px;
+    }
+    .card_replacement {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .profil_active .card {
+        width: 100%;
+        height: 100vh;
+    }
+    .profil_active .visible_info {
+        padding-right: 50%;
+    }
+    .profil_active .profil_picture {
+        right: calc(25% - 22.5px);
+    }
+    .vanish_info {
+        height: 227px;
+    }
+    .vanish_info a {
+        justify-content: center;
+    }
+    .vanish_info a span {
+        width: 154px;
+        margin-left: calc(50% - 160px);
+        font-size: 1.5em;
+    }
+    .vanish_info a img {
+        margin-right: calc(50% - 70px);
+        margin-left: 50px;
+    }
+    .vanish_info .profil_close_button {
+        display: block;
+        width: 60% !important;
+        height: 30px !important;
+        text-align: center;
+        text-decoration: none;
+        margin: 20px auto 25px auto;
+        background: #F9BC35;
+        font-size: 1.5em;
+        padding: 2px 0;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .vanish_info .profil_close_button:active {
+        background: #ffd06a;
+    }
+}
