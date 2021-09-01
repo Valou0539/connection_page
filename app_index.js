@@ -60,17 +60,31 @@ searchBar.addEventListener('keydown', (e) => {
     }
     if (!e.shiftKey) {
         e.preventDefault()
-        document.querySelector('.card').focus()
+        if (document.querySelector('.profil').style.display !== 'none') {
+            document.querySelector('.card').focus()    
+        } else {
+            document.querySelector('.profil_unset a:first-of-type').focus()
+        }
     }
 })
 
 const card = document.querySelector('.card')
+const profilUnsetFirstLink = document.querySelector('.profil_unset a:first-of-type')
 
 card.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab') {
         return
     }
-    
+    if (e.shiftKey) {
+        e.preventDefault()
+        searchBar.focus()
+    }
+})
+
+profilUnsetFirstLink.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') {
+        return
+    }
     if (e.shiftKey) {
         e.preventDefault()
         searchBar.focus()
