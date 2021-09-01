@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="logo" href="index.html">Lorem<span>.com</span></a>
     <main class="connection">
         <div id="signUp" class="sign_up_container">
             <div class="sign_up_item">
@@ -18,7 +19,7 @@
                     <h2>Sign up</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
                 </div>
-                <form id="signUpForm" action="#signUp">
+                <form id="signUpForm" action="connect.html#signUp" method="post">
                     <div class="form_transition">
                         <div class="input">
                             <label for="name">Name</label>
@@ -30,7 +31,10 @@
                         </div>
                         <div class="input">
                             <label for="password">Password</label>
-                            <input type="password" id="signUpPassword" name="password" placeholder="Password" required>
+                            <label for="signUpPassword" class="password">
+                                <input type="password" id="signUpPassword" name="password" placeholder="Password" required>
+                                <img id="signUpPasswordSVG" class="show_password" src="img/eye_enable.svg" alt="Show password" onclick="toggleSignUpPasswordVisible()">
+                            </label>
                         </div>
                         <div class="cgu">
                             <input type="checkbox" id="cgu" name="cgu" required>
@@ -38,6 +42,7 @@
                         </div>
                     </div>
                     <input id="signUpInput" type="submit" value="Sign up">
+                    <input type="text" value="signup" name="type" style="display: none;">
                 </form>
                 <a id="activeSignUp" href="#signUp">Sign up</a>
             </div>
@@ -48,7 +53,7 @@
                     <h2>Welcome Back!</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
                 </div>
-                <form id="loginForm" action="#login">
+                <form id="loginForm" action="connect.html#login" method="post">
                     <div class="form_transition">
                         <div class="input">
                             <label for="mail">E-mail</label>
@@ -56,10 +61,18 @@
                         </div>
                         <div class="input">
                             <label for="password">Password</label>
-                            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                            <label for="loginPassword" class="password">
+                                <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                                <img id="loginPasswordSVG" class="show_password" src="img/eye_enable.svg" alt="Show password" onclick="toggleLoginPasswordVisible()">   
+                            </label>
+                        </div>
+                        <div class="stay_connect">
+                            <input type="checkbox" id="stayConnect" name="stay_connect">
+                            <label for="stayConnect">Remember me</label>
                         </div>
                     </div>
                     <input id="loginInput" type="submit" value="login">
+                    <input type="text" value="login" name="type" style="display: none;">
                 </form>
                 <a id="activeLogin" href="#login">login</a>
             </div>
