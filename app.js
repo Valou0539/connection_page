@@ -274,6 +274,37 @@ loginInput.addEventListener('click', sendLoginForm)
 
 // Mobile #cgu::after position change
 
+const main = document.querySelector('.connection')
+
 if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    signUpFormContent.cgu.classList.add('mobil')
+    main.classList.add('mobil')
+}
+
+// Show password
+
+const signUpPasswordInput = signUpFormContent.password
+const signUpPasswordSVG = document.querySelector('#signUpPasswordSVG')
+
+const toggleSignUpPasswordVisible = function () {
+    if (signUpPasswordInput.type === 'password') {
+        signUpPasswordInput.type = 'text'
+        signUpPasswordSVG.src = 'img/eye_disable.svg'
+    } else {
+        signUpPasswordInput.type = 'password'
+        signUpPasswordSVG.src = 'img/eye_enable.svg'
+    }
+}
+
+
+const loginPasswordInput = loginFormContent.password
+const loginPasswordSVG = document.querySelector('#loginPasswordSVG')
+
+const toggleLoginPasswordVisible = function () {
+    if (loginPasswordInput.type === 'password') {
+        loginPasswordInput.type = 'text'
+        loginPasswordSVG.src = 'img/eye_disable.svg'
+    } else {
+        loginPasswordInput.type = 'password'
+        loginPasswordSVG.src = 'img/eye_enable.svg'
+    }
 }
